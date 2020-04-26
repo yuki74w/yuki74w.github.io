@@ -3,9 +3,14 @@ window.addEventListener("DOMContentLoaded", init);
 function init() {
     let table = document.querySelector("time-table")
     set_table(table);
+    fetch('https://drive.google.com/uc?id=1HkKyUv8uf9bAHb0PKlEJMC3psxRmWPsR')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (myJson) {
+            console.log(JSON.stringify(myJson));
+        });
 }
-
-//https://drive.google.com/uc?id=1HkKyUv8uf9bAHb0PKlEJMC3psxRmWPsR
 
 function set_table(obj) {
     let elem = document.querySelector("time-table");
