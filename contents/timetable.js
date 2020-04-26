@@ -2,7 +2,6 @@ window.addEventListener("DOMContentLoaded", init);
 
 function init() {
     let table = document.querySelector("time-table")
-    set_table(table);
     fetch('https://drive.google.com/uc?id=1HkKyUv8uf9bAHb0PKlEJMC3psxRmWPsR')
         .then(function (response) {
             return response.json();
@@ -10,6 +9,7 @@ function init() {
         .then(function (myJson) {
             console.log(JSON.stringify(myJson));
         });
+    set_table(table);
 }
 
 function set_table(obj) {
