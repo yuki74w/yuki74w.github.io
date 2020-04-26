@@ -2,7 +2,12 @@ window.addEventListener("DOMContentLoaded", init);
 
 function init() {
     let table = document.querySelector("time-table")
-    fetch('https://drive.google.com/uc?id=1HkKyUv8uf9bAHb0PKlEJMC3psxRmWPsR')
+    fetch('https://yuki74w.github.io/data/cources.json',
+        {
+            method: "GET",
+            mode: 'cors'
+
+        })
         .then(function (response) {
             return response.json();
         })
