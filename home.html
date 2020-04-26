@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="./load.js" type="module"></script>
+    <title> Schedule </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>履修</h1>
+        <info>
+            <grade>
+                <label>学年</label>
+                <select name="grade">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </grade>
+            <cluster>
+                <label>類</label>
+                <select name="faculty">
+                    <option value="1">I</option>
+                    <option value="2">II</option>
+                    <option value="3">III</option>
+                </select>
+            </cluster>
+            <student-number>
+                <label>学籍番号</label>
+                <input type="number" min="0">
+            </student-number>
+        </info>
+    </header>
+    <div class="contents">
+        <list>
+            <list-container>
+                <list-folder name="選択済み"></list-folder>
+                <list-folder name="未選択"></list-folder>
+                <list-folder name="必修"></list-folder>
+                <list-folder name="選択必修"></list-folder>
+            </list-container>
+        </list>
+        <time-table>
+        </time-table>
+    </div>
+</body>
+
+</html>

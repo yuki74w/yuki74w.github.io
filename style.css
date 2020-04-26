@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html
+{
+    height: 100%;
+    width: 100%;
+    font-family: "Roboto";
+}
+
+body
+{
+    background-color: #222;
+    color: #ddd;
+    display: grid;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    grid-template-rows: 13% 87%;
+}
+
+header
+{
+    z-index: 5;
+    user-select: none;
+    border-bottom: #ddd solid;
+    margin: 0.5em;
+    margin-bottom: 0;
+    grid-row: 0 / 1;
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    align-items: center;
+}
+
+header *
+{
+    flex-grow: 0;
+    font-size: 4vh;
+}
+
+student-number
+{
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+}
+
+header info
+{
+    display: flex;
+    justify-content: flex-end;
+}
+
+input
+{
+    width: 50%;
+}
+
+select, input
+{
+    text-align: right;
+    background-color: #222;
+    color: #ddd;
+    border: none;
+}
+
+.contents
+{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 30% 20px 1fr;
+}
+
+.task
+{
+    background-color: #ddd;
+    width: 100px;
+    height: 100px;
+    border: solid #333;
+    position: absolute;
+}
+
+list
+{
+    grid-column: 1/2;
+    width: 30%;
+    height: 85vh;
+    margin: 0.5em;
+    font-size: large;
+    overflow: hidden;
+    position: absolute;
+}
+
+list *
+{
+    box-sizing: border-box;
+    border: #ddd solid 0.05em;
+    user-select: none;
+}
+
+list-container
+{
+    display: flex;
+    flex: 2em;
+    flex-direction: column;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-inline-start: 0;
+    margin-right: -17px;
+    padding-right: 17px;
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 100%;
+}
+
+list-scroll-bar 
+{
+    width: 17px;
+    background-color: #d35;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 17px;
+    margin: 0;
+}
+
+list-scroll-thumb
+{
+    width: 100%;
+    margin: 0;
+    left: 0;
+    position: absolute;
+    min-height: 50px;
+    background-color: #eee;
+}
+
+list-scroll-thumb[dragging=true] 
+{
+    width: 100%;
+    position: absolute;
+    min-height: 50px;
+    background-color: #222;
+}
+
+list-element
+{
+    margin: 0.1em;
+    display: inline-block;
+    background-color: #333;
+}
+
+list-element:hover
+{
+    background-color: #222;
+}
+
+list-folder-label
+{
+    background-color: #444;
+}
+
+list-folder
+{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.1s ease-out;
+    margin: 0.1em;
+}
+
+list-folder[is_expanded=true]
+{
+    transition: all 0.1s ease-out;
+    background-color: #444;
+}
+
+time-table
+{
+    user-select: none;
+    margin: 0.5em;
+    grid-column: 3/4;
+    grid-template-columns: 2em repeat(6, 1fr);
+    grid-template-rows: 2em repeat(6, 1fr);
+    display: grid;
+}
+
+time-table item
+{
+    font-size: large;
+    background-color: #ddd;
+    color: #222;
+    border: #222 solid;
+}
+
+time-table item:hover
+{
+    color: #ddd;
+    background-color: #333;
+}
+
+screen
+{
+    background-color: #ffffff00;
+    transition: all .15s ease-out;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    visibility: hidden;
+    z-index: 10;
+}
+
+closer
+{
+    top: 5px;
+    right: 5px;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+}
+
+closer stick
+{
+    
+    background-color: #ddd;
+    width: 4px;
+    height: 30px;
+    left: 13px;
+    position: absolute;
+    transform: rotate(45deg);
+}
+
+closer stick::after
+{
+    
+    content: " ";
+    background-color: #ddd;
+    width: 4px;
+    height: 30px;
+    position: absolute;
+    transform: rotate(270deg);
+}
+
+dialog
+{
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 80%;
+    height: 80%;
+    background-color: #222;
+    color: #fff;
+    border: none;
+}
+
+dialog list
+{
+    height: 78vh;
+}
+
+cource
+{
+    position: absolute;
+    width: 50vw;
+    height: 10vh;
+}

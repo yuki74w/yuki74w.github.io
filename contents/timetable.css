@@ -1,0 +1,24 @@
+
+time-table
+{
+    user-select: none;
+    margin: 0.5em;
+    grid-column: 3/4;
+    grid-template-columns: 2em repeat(6, 1fr);
+    grid-template-rows: 2em repeat(6, 1fr);
+    display: grid;
+}
+
+time-table item
+{
+    font-size: large;
+    background-color: #ddd;
+    color: #222;
+    border: #222 solid;
+}
+
+time-table item:hover
+{
+    color: #ddd;
+    background-color: #333;
+}

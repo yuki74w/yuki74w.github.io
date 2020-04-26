@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>uec-live-status</title>
+    <script src="./page.js"></script>
+    <link rel="stylesheet" type="text/css" href="./page.css">
+    <link rel="stylesheet" type="text/css" href="./status.css">
+    <link rel="shortcut icon" href="fav.ico" type="image/x-icon">
+</head>
+
+<body>
+    <h1>Status</h1>
+    <warning>個人情報の入力になります。気をつけてください。</warning>
+    <bundle>
+        <header>所属</header>
+        <item name="grade">
+            <name>学年</name>
+            <form>
+                <input name="grade" type="number" min="1" max="4">
+            </form>
+        </item>
+        <item name="cluster">
+            <name>類</name>
+            <form>
+                <select name="cluster">
+                    <option value="unspecified">未指定</option>
+                    <option value="1">I</option>
+                    <option value="2">II</option>
+                    <option value="3">III</option>
+                </select>
+            </form>
+        </item>
+        <item name="area" style="display: none;">
+            <name>エリア</name>
+            <form>
+                <select name="area">
+                    <option value="unspecified">未指定</option>
+                    <option value="I">I</option>
+                    <option value="M">M</option>
+                </select>
+            </form>
+        </item>
+        <item name="department">
+            <name>プログラム</name>
+            <form>
+                <select name="department">
+                </select>
+            </form>
+        </item>
+        <item name="autoinput">
+            <name>学籍番号から自動入力</name>
+            <form>
+                <checkbox></checkbox>
+            </form>
+        </item>
+        <item name="student-number">
+            <name>学籍番号</name>
+            <form>
+                <input name="student-number" type="number" min="0" readonly>
+            </form>
+        </item>
+    </bundle>
+
+</body>
+
+</html>
